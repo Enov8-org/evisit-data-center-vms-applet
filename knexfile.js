@@ -7,10 +7,10 @@ module.exports = {
   development: {
     client: "mysql2",
     connection: {
-      database: "access_control",
-      user: "root",
-      password: "root",
-      port: 8889,
+      database: process.env.DB,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      port: process.env.DB_PORT,
     },
     pool: {
       min: 2,
@@ -24,10 +24,10 @@ module.exports = {
   staging: {
     client: "mysql2",
     connection: {
-      database: "access_control",
-      user: "root",
-      password: "",
-      port: 8888,
+      database: process.env.DB,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      port: process.env.DB_PORT,
     },
     pool: {
       min: 2,
@@ -41,10 +41,10 @@ module.exports = {
   production: {
     client: "mysql2",
     connection: {
-      database: "access_control",
-      user: "root",
-      password: "",
-      port: 8888,
+      database: process.env.DB,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      port: process.env.DB_PORT,
     },
     pool: {
       min: 2,
